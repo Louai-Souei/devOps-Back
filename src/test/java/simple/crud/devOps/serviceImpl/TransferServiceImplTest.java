@@ -120,8 +120,9 @@ class TransferServiceImplTest {
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String formattedDate = dateFormat.format(result.getTransferDate());
+        String todayDate = dateFormat.format(new Date());
 
-        assertEquals("2024-12-31", formattedDate);
+        assertEquals(todayDate, formattedDate);
 
         verify(transferRepository, times(1)).findById(1L);
         verify(transferRepository, times(1)).save(any(Transfer.class));

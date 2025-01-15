@@ -30,6 +30,7 @@ public class TransferDto {
         transfer.setId(this.id);
         transfer.setName(this.name);
         transfer.setAmount(this.amount);
+        transfer.setTransferDate(this.transferDate);
         return transfer;
     }
 
